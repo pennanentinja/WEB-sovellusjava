@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <title>Harjoitus 4</title>
+</head>
+<body>
+  <script>
+
+    let opiskelija = confirm("Oletko opiskelija?");
+
+    if (opiskelija) {
+      let nimi = prompt("Mikä on nimesi?");
+      if (nimi) {
+        document.write("Tervetuloa, " + nimi + "!");
+      } else {
+        document.write("Tervetuloa opiskelija!");
+      }
+    } else {
+      document.write("Valitettavasti tämä sivu on tarkoitettu vain opiskelijoille.");
+    }
+  </script>
+</body>
+</html>
