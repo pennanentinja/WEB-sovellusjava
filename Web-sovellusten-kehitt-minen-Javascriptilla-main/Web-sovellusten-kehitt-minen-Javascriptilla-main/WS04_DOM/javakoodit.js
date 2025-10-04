@@ -15,3 +15,19 @@ function thirdButton() {
     vaihda.innerHTML = "<em><strong>Onneksi olkoon! Olet korvannut vanhan Lorem Ipsum -tekstin.</strong></em><br><br>";
 }
 
+function valintaAlert() {
+    const valinta = document.getElementById("mySelect").value;
+    alert("Valitsit " + valinta);
+    const carimage = document.getElementById("carimage");
+
+    const kuvat = {
+        BMW: "kuvat/bmw.jpg",
+        Audi: "kuvat/audi.jpg",
+        Mercedes: "kuvat/mercedes.jpg",
+        Volvo: "kuvat/volvo.jpg"
+    };
+
+  carimage.src = kuvat[valinta];
+}
+
+
