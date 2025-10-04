@@ -30,4 +30,22 @@ function valintaAlert() {
   carimage.src = kuvat[valinta];
 }
 
+function lisaaRivi() {
+  const nimi = document.getElementById("nimi").value.trim();
+  const tehtava = document.getElementById("tehtava").value.trim();
+  const palkka = document.getElementById("palkka").value.trim();
+
+  const virheet = [
+    nimi.length <= 5 && "Nimen tulee olla yli 5 merkkiä pitkä.",
+    !tehtava && "Tehtävä ei saa olla tyhjä.",
+    (isNaN(palkka) || palkka <= 0) && "Palkan tulee olla numero ja yli 0."
+  ].filter(Boolean);
+
+  virheet.length ? alert(virheet.join("\n")) : (() => {
+    const t = document.getElementById("data").getElementsByTagName("tbody")[0];
+    const r = t.insertRow();
+    [nimi, tehtava, "$" + palkka].forEach((x, i) => r.insertCell(i).textContent = x);
+  })();
+}
+
 
