@@ -6,7 +6,7 @@
     <title>Työpaja 3</title>
     <link rel="stylesheet" href="css/styles.css">
     
-    <script src="javakoodit.js"> </script>
+    <script src="javakoodit.js" defer> </script>
 
 </head>
 
@@ -16,7 +16,7 @@
     <p>Tässä harjoituksessa harjoittelemme JavaScript-tapahtumien käyttöä. Käytä luentomateriaalia rinnakkain näiden
         harjoitusten kanssa. On myös hyvä idea tallentaa kirjoittamasi koodirivit myöhempää käyttöä varten.</p>
     <hr />
-    <h2>Harjoitus 1</h2>
+    <h2 id="harj1">Harjoitus 1</h2>
     <p>Alla näet kolme painiketta. Muokkaa lähdekoodia ja lisää näihin painikkeisiin onClick-tapahtumat.</p>
     <p>
         <button onclick="alert('Klikkasit minua!')">Napsauta minua</button>
@@ -69,7 +69,7 @@
     </table>
 
     <hr />
-    <h2>Harjoitus 2</h2>
+    <h2 onMouseover="console.log('Stepped over my a mouse!')">Harjoitus 2</h2>
     <ul>
         <li>Lisää onMouseOver-tapahtuma otsikkoon "Harjoitus 2". Tapahtuman pitäisi aktivoitua, kun hiiri siirtyy
             otsikon
@@ -111,6 +111,7 @@
     <hr />
     <h2>Harjoitus 4</h2>
     <div id="coordinates"></div>
+    <p id="coords"></p>
     <p>Lisää onMouseMove-tapahtuma yllä olevaan DIV-elementtiin. Kun liikutat
         hiirtä DIVin (suorakulmion) päällä, ohjelman pitäisi tulostaa kohdistimen
         koordinaatit.
